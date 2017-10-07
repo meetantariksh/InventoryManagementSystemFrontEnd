@@ -2,13 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ApplicationHomeComponent } from './applicationHome/applicationHome.component';
+import { Application404Error } from './error/application404Error/application404Error.component';
+
+import { ApplicationRoutes } from './applicationRouting/appRouting.module';
+import { ApplicationErrorRoutes } from './error/applicationErrorRouting.module';
+
+import { CoreModule } from './applicationCoreModule/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ApplicationHomeComponent,
+    Application404Error,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CoreModule,
+    ApplicationRoutes,
+    //Keep this at last.
+    ApplicationErrorRoutes,
   ],
   providers: [],
   bootstrap: [AppComponent]

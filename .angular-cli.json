@@ -19,9 +19,16 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/css/global/bootstrap-grid.min.css",
+        "assets/css/global/bootstrap-reboot.min.css",
+        "assets/css/global/bootstrap.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/javaScript/global/jquery.min.js",
+        "assets/javaScript/global/popper.min.js",
+        "assets/javaScript/global/bootstrap.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
