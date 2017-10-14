@@ -19,6 +19,9 @@
                 <a class="nav-link">About</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" (click)="openCheckConnection(modalCheckConnection)">Check System Conectivity</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" >Login</a>
               </li>
             </ul>
@@ -154,3 +157,41 @@
       </footer>
   
 </div>
+<ng-template #modalCheckConnection let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Backend Application - Connection Status</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Close click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align: center">
+        <div style="text-align: center">
+            <div class="row">
+              <div class="col-sm">
+                <b>{{connectionCheckHeadder}}</b>
+                <br>
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                    Connection To Backend Application
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    <b><u>{{backendApplicationConnectionStatus}}</u></b>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                    Connection To Database Servers
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    <b><u>{{databaseConnectionStatus}}</u></b>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+      </div>
+</ng-template>

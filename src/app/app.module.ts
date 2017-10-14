@@ -8,6 +8,8 @@ import { Application404Error } from './error/application404Error/application404E
 import { ApplicationRoutes } from './applicationRouting/appRouting.module';
 import { ApplicationErrorRoutes } from './error/applicationErrorRouting.module';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { CoreModule } from './applicationCoreModule/core.module';
 
 @NgModule({
@@ -18,6 +20,7 @@ import { CoreModule } from './applicationCoreModule/core.module';
   ],
   imports: [
     BrowserModule,
+    NgbModule.forRoot(),
     CoreModule,
     ApplicationRoutes,
     //Keep this at last.
